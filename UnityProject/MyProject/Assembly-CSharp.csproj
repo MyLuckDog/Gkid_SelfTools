@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\MSingleton.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\TestScript\JustTestOther.cs" />
     <Compile Include="Assets\Scripts\Tools\Extends.cs" />
     <Compile Include="Assets\Scripts\Tools\MyLogger.cs" />
     <Compile Include="Assets\Scripts\UI\MyPanel.cs" />
