@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class UI_Draw_Base : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     protected int Width, Height;
-    protected int Scale = 1;
+    protected int Scale = 2; //包括系统优化，优化的同时会降低质量，锯齿比较严重
     public float Radius = 100;
     public RawImage TheDrawingImage;
     protected Texture2D TheDrawingTexture;
@@ -51,7 +51,7 @@ public class UI_Draw_Base : MonoBehaviour, IPointerDownHandler, IDragHandler, IP
 
     public void ResetTexture()
     {
-        TheDrawingTexture = new Texture2D(Width, Height, TextureFormat.ARGB32, false);
+        TheDrawingTexture = new Texture2D(Width, Height, TextureFormat.ARGB32, false); //默认default材质
         TheDrawingImage.material.mainTexture = TheDrawingTexture;
         if (hasDirty)
         {
