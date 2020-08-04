@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using System;
-
 public class JustTestOther : MonoBehaviour
 {
     FromOther from = new FromOther();

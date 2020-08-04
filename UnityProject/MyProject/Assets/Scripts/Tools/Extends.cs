@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace MyTools
@@ -49,6 +50,18 @@ namespace MyTools
                 }
             }
             return null;
+        }
+        public static List<int> FindAllIndex<T>(this List<T> all, T item) where T : IComparable<T>
+        {
+            List<int> IndexList = new List<int>();
+            for (int i = 0; i < all.Count; i++)
+            {
+                if (all[i].CompareTo(item) == 0)
+                {
+                    IndexList.Add(i);
+                }
+            }
+            return IndexList;
         }
     }
 }
